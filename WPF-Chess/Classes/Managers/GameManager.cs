@@ -10,12 +10,12 @@ namespace WPF_Chess.Classes.Managers
     {
         public GameManager()
         {
-
+            
         }
 
         public void NewGame_Singleplayer()
         {
-
+            PlayerManager playerManager = new PlayerManager();
         }
 
         public void NewGame_LocalMultiplayer()
