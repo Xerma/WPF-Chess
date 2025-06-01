@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Chess.Classes.Managers;
 
 namespace WPF_Chess
 {
@@ -27,6 +28,8 @@ namespace WPF_Chess
             // load: JSON
 
             InitializeComponent();
+
+            GameManager gameManager = new GameManager();
         }
     }
 }
