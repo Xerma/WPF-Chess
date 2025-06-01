@@ -43,6 +43,8 @@ namespace WPF_Chess.Classes.Pieces
         public int AttackRangeUp { get; set; } = 0;
         public int AttackRangeDown { get; set; } = 0;
         public int AttackRangeDiagonal { get; set; } = 0;
+        public bool CanAttackUp { get; set; } = false;
+        public bool CanAttackDown { get; set; } = false;
 
         private void GeneratePieceID(int pieceNumber)
         {
