@@ -7,9 +7,9 @@ using System.Windows.Media;
 
 namespace WPF_Chess.Classes.Pieces
 {
-    internal class Pawn : Piece
+    internal class King : Piece
     {
-        public Pawn(Owner owner, int number) : base(PieceType.Pawn, owner, number)
+        public King(Owner owner, int number) : base(PieceType.Pawn, owner, number)
         {
 
         }
