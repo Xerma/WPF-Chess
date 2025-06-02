@@ -23,6 +23,8 @@ namespace WPF_Chess.Classes.Pieces
         private DrawingImage _image;
         public DrawingImage Image { get { return _image; } }
 
+        public SolidColorBrush DisplayColor { get; set; }
+
         public Piece(PieceType type, Owner owner, int pieceNumber = 1)
         {
             Type = type;
