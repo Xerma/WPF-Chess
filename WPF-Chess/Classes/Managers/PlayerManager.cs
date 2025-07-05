@@ -17,15 +17,5 @@ namespace WPF_Chess.Classes.Managers
         {
 
         }
-
-        public Piece[,] AddHumanPlayer(Owner owner)
-        {
-            
-        }
-
-        public void AddBotPlayer()
-        {
-
-        }
     }
 }
