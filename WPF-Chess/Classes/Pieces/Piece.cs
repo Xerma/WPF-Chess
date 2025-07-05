@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using WPF_Chess.Structs;
 
 namespace WPF_Chess.Classes.Pieces
 {
@@ -13,7 +14,7 @@ namespace WPF_Chess.Classes.Pieces
 
     public enum Owner { P1, P2 }
 
-    public class Piece
+    public abstract class Piece
     {
         private string _pieceId;
         public string PieceId { get { return _pieceId; } }
@@ -33,20 +34,9 @@ namespace WPF_Chess.Classes.Pieces
             SetPieceImage(type);
         }
 
-        // movement
-        public int MoveRangeLeft { get; set; } = 0;
-        public int MoveRangeRight { get; set; } = 0;
-        public int MoveRangeUp { get; set; } = 0;
-        public int MoveRangeDown { get; set; } = 0;
         public bool HasAlreadyMoved { get; set; } = false;
-
-        // attacking
-        public int AttackRangeHorizontal { get; set; } = 0;
-        public int AttackRangeUp { get; set; } = 0;
-        public int AttackRangeDown { get; set; } = 0;
-        public int AttackRangeDiagonal { get; set; } = 0;
-        public bool CanAttackUp { get; set; } = false;
-        public bool CanAttackDown { get; set; } = false;
+        public abstract Vector2D[] MovementVectors { get; }
+        public abstract Vector2D[] AttackVectors { get; }
 
         private void GeneratePieceID(int pieceNumber)
         {
