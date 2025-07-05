@@ -32,9 +32,9 @@ namespace WPF_Chess.Classes.Managers
             King king = new(owner, 1);
             Bishop bishop2 = new(owner, 2);
             Knight knight2 = new(owner, 2);
-            Rook rook = new(owner, 2);
+            Rook rook2 = new(owner, 2);
 
-            Piece[] rearSet = [rook1, knight1, bishop1, queen, king, bishop2, knight2, rook];
+            Piece[] rearSet = [rook1, knight1, bishop1, queen, king, bishop2, knight2, rook2];
 
             return rearSet;
         }
