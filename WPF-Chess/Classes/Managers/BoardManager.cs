@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPF_Chess.Classes.Pieces;
+using WPF_Chess.Structs;
 using static WPF_Chess.Classes.Pieces.Piece;
 
 namespace WPF_Chess.Classes.Managers
@@ -29,7 +30,6 @@ namespace WPF_Chess.Classes.Managers
             //first = row (nums 1 - 8)
             //second = column (letters A - H)
             //0 = row 8 (top)
-
         }
     }
 }
