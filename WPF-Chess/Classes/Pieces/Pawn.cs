@@ -17,7 +17,14 @@ namespace WPF_Chess.Classes.Pieces
         private readonly Vector2D[] _pawnAttacks;
         public override Vector2D[] AttackVectors => _pawnAttacks;
 
-        public Pawn(Owner owner, int number) : base(PieceType.Pawn, owner, number)
+        private string _currentPosition;
+        public override string CurrentPosition
+        {
+            get { return _currentPosition; }
+            set { _currentPosition = value; }
+        }
+
+        public Pawn(Owner owner, string cp) : base(PieceType.Pawn, owner, cp)
         {
             switch (owner)
             {
@@ -32,6 +39,8 @@ namespace WPF_Chess.Classes.Pieces
                 default:
                     throw new ArgumentException("Unknown owner", nameof(owner));
             }
+
+            _currentPosition = cp;
         }
     }
 }
