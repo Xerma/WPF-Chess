@@ -8,9 +8,9 @@ namespace WPF_Chess.Classes.Managers
 {
     internal class GameManager
     {
-        public GameManager()
+        public GameManager(MainWindow window)
         {
-            
+            BoardManager boardManager = new(window);
         }
 
         public void NewGame_Singleplayer()
