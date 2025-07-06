@@ -16,33 +16,25 @@ namespace WPF_Chess.Classes.Pieces
 
     public abstract class Piece
     {
-        private string _pieceId;
-        public string PieceId { get { return _pieceId; } }
         public PieceType Type { get; private set; }
         public Owner Owner { get; private set; }
+        public abstract string CurrentPosition { get; set; }
 
         private DrawingImage _image;
         public DrawingImage Image { get { return _image; } }
 
-        public SolidColorBrush DisplayColor { get; set; }
-
-        public Piece(PieceType type, Owner owner, int pieceNumber = 1)
+        protected Piece(PieceType type, Owner owner, string currentPosition)
         {
             Type = type;
             Owner = owner;
-            GeneratePieceID(pieceNumber);
+            CurrentPosition = currentPosition;
             SetPieceImage(type);
+            _image = UpdateDrawingColor(owner, Image);
         }
 
         public bool HasAlreadyMoved { get; set; } = false;
         public abstract Vector2D[] MovementVectors { get; }
         public abstract Vector2D[] AttackVectors { get; }
-
-        private void GeneratePieceID(int pieceNumber)
-        {
-            _pieceId = $"{Owner}_{Type}_{pieceNumber}";
-
-        }
 
         private void SetPieceImage(PieceType type)
         {
@@ -67,6 +59,36 @@ namespace WPF_Chess.Classes.Pieces
                     _image = (DrawingImage)Application.Current.FindResource("KingIcon");
                     break;
             }
+        }
+
+        private DrawingImage UpdateDrawingColor(Owner owner, DrawingImage original)
+        {
+            SolidColorBrush fill = Brushes.Gray;
+
+            switch (owner)
+            {
+                case Owner.P1:
+                    fill = (SolidColorBrush)Application.Current.FindResource("P1_Color");
+                    
+                    break;
+                case Owner.P2:
+                    fill = (SolidColorBrush)Application.Current.FindResource("P2_Color");
+                    break;
+            }
+
+            if (original.Drawing is GeometryDrawing geometry)
+            {
+                GeometryDrawing newDrawing = new GeometryDrawing
+                {
+                    Geometry = geometry.Geometry.Clone(),
+                    Brush = fill,
+                    Pen = geometry.Pen
+                };
+
+                return new DrawingImage(newDrawing);
+            }
+
+            return original;
         }
     }
 }
