@@ -24,7 +24,7 @@ namespace WPF_Chess
         {
             InitializeComponent();
 
-            GameManager gameManager = new GameManager();
+            GameManager gameManager = new(this);
         }
     }
 }
