@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,11 +19,13 @@ namespace WPF_Chess.Classes.Pieces.ChessUserControls
 {
     public partial class PawnControl : UserControl
     {
-        public PawnControl(Owner owner, string currentPosition)
+        private readonly Pawn _pawn;
+
+        public PawnControl(Owner owner, string position)
         {
-            Pawn pawn = new(owner, currentPosition);
             InitializeComponent();
-            PawnImage.Source = pawn.Image;
+            _pawn = new Pawn(owner, position);
+            PawnImage.Source = _pawn.Image;
         }
     }
 }
