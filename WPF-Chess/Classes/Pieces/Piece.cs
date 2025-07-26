@@ -68,11 +68,11 @@ namespace WPF_Chess.Classes.Pieces
             switch (owner)
             {
                 case Owner.P1:
-                    fill = (SolidColorBrush)Application.Current.FindResource("P1_Color");
+                    fill = (SolidColorBrush)Application.Current.TryFindResource("P1Color");
                     
                     break;
                 case Owner.P2:
-                    fill = (SolidColorBrush)Application.Current.FindResource("P2_Color");
+                    fill = (SolidColorBrush)Application.Current.TryFindResource("P2Color");
                     break;
             }
 
