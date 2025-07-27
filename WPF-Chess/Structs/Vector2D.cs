@@ -6,15 +6,26 @@ using System.Threading.Tasks;
 
 namespace WPF_Chess.Structs
 {
-    public readonly struct Vector2D
+    public readonly struct Vector2D(int x, int y)
     {
-        public readonly int X;
-        public readonly int Y;
+        public readonly int X = x;
+        public readonly int Y = y;
 
-        public Vector2D(int x, int y)
+        public string ToBoardString()
+    {
+            if (!IsValidBoardVector())
+                return "";
+            char column = (char)('A' + (X - 1));
+            return $"{column}{Y}";
+        }
+
+        public static Vector2D ToBoardGrid(string s)
         {
-            X = x;
-            Y = y;
+            if (!IsValidVectorString(s))
+                return new Vector2D(int.MinValue, int.MinValue);
+            int boardX = s[0] - 64;
+            int boardY = int.Parse(s[1].ToString());
+            return new Vector2D(boardX, boardY);
         }
 
         public bool IsValidBoardVector()
