@@ -41,7 +41,7 @@ namespace WPF_Chess.Structs
             if (c < 'A' || c > 'H')
                 throw new ArgumentException("First character is not A - H", c.ToString());
 
-            return new Vector2D(0, 0);
+            return true;
         }
     }
 }
