@@ -12,12 +12,6 @@ using WPF_Chess.Classes.Managers;
 
 namespace WPF_Chess
 {
-    //Rows == 1 - 8
-    //Columns == A - H
-
-    //row  [0, 1, 2, 3, 4, 5, 6, 7]
-    //col  [A, B, C, D, E, F, G, H]
-
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,6 +19,7 @@ namespace WPF_Chess
             InitializeComponent();
 
             GameManager gameManager = new(this);
+            BoardManager boardManager = new(this);
         }
     }
 }
