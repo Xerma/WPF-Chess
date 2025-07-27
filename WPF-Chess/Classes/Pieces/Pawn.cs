@@ -30,12 +30,26 @@ namespace WPF_Chess.Classes.Pieces
             switch (owner)
             {
                 case Owner.P2: // TOP
-                    _pawnMoves = [new(0, -1)];
-                    _pawnAttacks = [new(-1, -1), new(1, -1)];
+                    MovementVectors = 
+                        [
+                            new(0, -1)
+                        ];
+                    AttackVectors = 
+                        [
+                            new(-1, -1),
+                            new(1, -1)
+                        ];
                     break;
                 case Owner.P1: // BOTTOM
-                    _pawnMoves = [new(0, 1)];
-                    _pawnAttacks = [new(-1, 1), new(1, 1)];
+                    MovementVectors = 
+                        [
+                            new(0, 1)
+                        ];
+                    AttackVectors = 
+                        [
+                            new(-1, 1),
+                            new(1, 1)
+                        ];
                     break;
                 default:
                     throw new ArgumentException("Unknown owner", nameof(owner));
