@@ -17,11 +17,13 @@ namespace WPF_Chess.Structs
             Y = y;
         }
 
-        public string ToBoardString()
+        public bool IsValidBoardVector()
         {
-            char column = (char)('A' + X);
-            int row = 8 - Y;
-            return $"{column}{row}";
+            if ((0 < X && X < 9) == false)
+                throw new IndexOutOfRangeException("Value X must be between 1 and 8");
+            if ((0 < Y && Y < 9) == false)
+                throw new IndexOutOfRangeException("Value Y must be between 1 and 8");
+            return true;
         }
 
         public static bool IsValidVectorString(string s)
