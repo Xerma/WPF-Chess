@@ -55,7 +55,7 @@ namespace WPF_Chess.Classes.Pieces
                     throw new ArgumentException("Unknown owner", nameof(owner));
             }
 
-            _currentPosition = cp;
+            Position = cp;
         }
     }
 }
