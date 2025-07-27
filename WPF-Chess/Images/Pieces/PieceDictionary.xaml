@@ -1,47 +1,47 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <SolidColorBrush x:Key="P1_Color" Color="Blue"/>
-    <SolidColorBrush x:Key="P2_Color" Color="Red"/>
+    <SolidColorBrush x:Key="P1Color" Color="Blue"/>
+    <SolidColorBrush x:Key="P2Color" Color="Red"/>
 
     <DrawingImage x:Key="PawnIcon">
         <DrawingImage.Drawing>
-            <GeometryDrawing Brush="{DynamicResource P1_Color}"
+            <GeometryDrawing Brush="{DynamicResource P1Color}"
                              Geometry="M10.512 14H8c-.883 0-1.602.45-1.602 1v2c0 .55.72 1 1.602 1h1.602v.344c0 2.75-.415 5.41-2.403 7.656h17.602c-1.988-2.246-2.403-4.906-2.403-7.656V18H24c.883 0 1.602-.45 1.602-1v-2c0-.55-.72-1-1.602-1h-2.512c2.942-1.148 4.91-3.172 4.91-5.5C26.398 4.91 21.742 2 16 2S5.602 4.91 5.602 8.5c0 2.328 1.968 4.352 4.91 5.5Zm19.886 14H1.602C.715 28 0 28.45 0 29v2c0 .55.715 1 1.602 1h28.796c.887 0 1.602-.45 1.602-1v-2c0-.55-.715-1-1.602-1Zm0 0"/>
         </DrawingImage.Drawing>
     </DrawingImage>
 
     <DrawingImage x:Key="KnightIcon">
         <DrawingImage.Drawing>
-            <GeometryDrawing Brush="{DynamicResource P1_Color}"
+            <GeometryDrawing Brush="{DynamicResource P1Color}"
                          Geometry="M9.707 6.59C6.59 7.91 5.344 10.914 4.555 13.762l7.496 7.5c-.742 3.73-1.254 7.336-1.254 11.426h20.96c-1.067-3.93-1.554-6.61-4.488-10.656-.816-1.152-1.418-1.883-2.254-2.906 0 0 1.418-2.512.418-6.004-.617-2.265-1.941-4.402-3.59-5.957-.906-.898-2.012-1.68-3.321-2.027-1.965-.515-3.847.015-5.815 1.36Zm7.925 5.512c.887 0 1.602.715 1.602 1.601 0 .883-.715 1.598-1.602 1.598a1.6 1.6 0 0 1-1.597-1.598c0-.886.71-1.6 1.597-1.6ZM0 33.988v-2c0-.55.715-1 1.602-1h28.796c.887 0 1.602.45 1.602 1v2c0 .55-.715 1-1.602 1H1.602C.715 34.988 0 34.538 0 33.988Zm0 0"/>
         </DrawingImage.Drawing>
     </DrawingImage>
 
     <DrawingImage x:Key="BishopIcon">
         <DrawingImage.Drawing>
-            <GeometryDrawing Brush="{DynamicResource P1_Color}"
+            <GeometryDrawing Brush="{DynamicResource P1Color}"
                          Geometry="M.8 17.992c0 3.227 2.216 4.613 5.598 5.29V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718h.582V26h1.602v-2.718c3.383-.676 5.598-2.063 5.598-5.29 0-2.305-1.25-4.348-3.28-5.906.676-.383 1.176-.945 1.176-1.586 0-.918-.91-1.676-2.05-1.676-.418 0-.812.105-1.156.285a4.79 4.79 0 0 0 .067-.816c0-5.375-6.305-9.75-14.075-9.75S1.925 4.52 1.925 9.895c0 .273.023.543.067.805A2.127 2.127 0 0 0 .8 12.012c0 .637.5 1.203 1.18 1.59C2.051 13.641.8 15.684.8 17.992Zm0 0"/>
         </DrawingImage.Drawing>
     </DrawingImage>
 
     <DrawingImage x:Key="RookIcon">
         <DrawingImage.Drawing>
-            <GeometryDrawing Brush="{DynamicResource P1_Color}"
+            <GeometryDrawing Brush="{DynamicResource P1Color}"
                          Geometry="M30.668 2H26c-.738 0-1.332.45-1.332 1v3h-4V3c0-.55-.594-1-1.332-1h-4c-.738 0-1.332.45-1.332 1v3h-4V3c0-.55-.594-1-1.332-1H3.332C2.594 2 2 2.45 2 3v5.5h28V3c0-.55-.594-1-1.332-1ZM30 11.5H2V26h28Zm0 0M0 33.988v-2c0-.55.715-1 1.602-1h28.796c.887 0 1.602.45 1.602 1v2c0 .55-.715 1-1.602 1H1.602C.715 34.988 0 34.538 0 33.988Zm0 0"/>
         </DrawingImage.Drawing>
     </DrawingImage>
 
     <DrawingImage x:Key="QueenIcon">
         <DrawingImage.Drawing>
-            <GeometryDrawing Brush="{DynamicResource P1_Color}"
+            <GeometryDrawing Brush="{DynamicResource P1Color}"
                          Geometry="M16 7a3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 0 0 7Zm11 0a3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 0 0 7ZM5 7a3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 0 0 7Zm21.5 3a2.5 2.5 0 0 0-2.45 2.09 4.5 4.5 0 0 0-3.55 0A2.5 2.5 0 0 0 12 10a2.5 2.5 0 0 0-2.45 2.09A4.5 4.5 0 0 0 5 17v2h22v-2a4.5 4.5 0 0 0-4.55-4.91A2.5 2.5 0 0 0 26.5 10ZM0 31v-2c0-.55.45-1 1-1h30c.55 0 1 .45 1 1v2c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1Zm0 0"/>
         </DrawingImage.Drawing>
     </DrawingImage>
 
     <DrawingImage x:Key="KingIcon">
         <DrawingImage.Drawing>
-            <GeometryDrawing Brush="{DynamicResource P1_Color}"
+            <GeometryDrawing Brush="{DynamicResource P1Color}"
                          Geometry="M28.57 28H3.43c-.633 0-1.145.45-1.145 1v2c0 .55.512 1 1.145 1h25.14c.633 0 1.145-.45 1.145-1v-2c0-.55-.512-1-1.145-1Zm-4.824-7.063c2.227-1.406 3.887-3.406 3.887-6.031 0-3.867-3.735-7.004-8.332-7.004-4.598 0-8.333 3.137-8.333 7.004 0 2.625 1.66 4.625 3.89 6.031H7.457c-.633 0-1.145.45-1.145 1v2c0 .55.512 1 1.145 1h19.086c.632 0 1.144-.45 1.144-1v-2c0-.55-.512-1-1.144-1ZM14.672 2h2.23v3.016h3.016v2.23h-3.016V10.26h-2.23V7.246h-3.015v-2.23h3.015V2Zm0 0"/>
         </DrawingImage.Drawing>
     </DrawingImage>
