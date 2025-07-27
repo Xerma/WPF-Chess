@@ -15,16 +15,6 @@ namespace WPF_Chess.Classes.Pieces
         public override Vector2D[] AttackVectors { get; set; }
         public override string Position { get; set; }
 
-        private readonly Vector2D[] _pawnAttacks;
-        public override Vector2D[] AttackVectors => _pawnAttacks;
-
-        private string _currentPosition;
-        public override string CurrentPosition
-        {
-            get { return _currentPosition; }
-            set { _currentPosition = value; }
-        }
-
         public Pawn(Owner owner, string cp) : base(PieceType.Pawn, owner, cp)
         {
             switch (owner)
