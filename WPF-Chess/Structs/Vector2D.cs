@@ -24,8 +24,7 @@ namespace WPF_Chess.Structs
             return $"{column}{row}";
         }
 
-        // NOT USING??
-        public static Vector2D ToVector(string s)
+        public static bool IsValidVectorString(string s)
         {
             if (string.IsNullOrEmpty(s))
                 throw new ArgumentException("Cannot convert null or empty string to Vector2D", s);
