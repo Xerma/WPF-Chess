@@ -11,8 +11,9 @@ namespace WPF_Chess.Classes.Pieces
 {
     internal class Pawn : Piece
     {
-        private readonly Vector2D[] _pawnMoves;
-        public override Vector2D[] MovementVectors => _pawnMoves;
+        public override Vector2D[] MovementVectors { get; set; }
+        public override Vector2D[] AttackVectors { get; set; }
+        public override string Position { get; set; }
 
         private readonly Vector2D[] _pawnAttacks;
         public override Vector2D[] AttackVectors => _pawnAttacks;
