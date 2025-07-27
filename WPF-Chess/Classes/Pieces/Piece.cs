@@ -18,7 +18,8 @@ namespace WPF_Chess.Classes.Pieces
     {
         public PieceType Type { get; private set; }
         public Owner Owner { get; private set; }
-        public abstract string CurrentPosition { get; set; }
+        public abstract string Position { get; set; }
+        public DrawingImage Image { get; private set; }
 
         private DrawingImage _image;
         public DrawingImage Image { get { return _image; } }
