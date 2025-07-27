@@ -21,6 +21,9 @@ namespace WPF_Chess.Classes.Pieces
         public Owner Owner { get; private set; }
         public abstract string Position { get; set; }
         public DrawingImage Image { get; private set; }
+        public bool HasMoved { get; set; } = false;
+        public abstract Vector2D[] MovementVectors { get; set; }
+        public abstract Vector2D[] AttackVectors { get; set; }
 
         protected Piece(PieceType type, Owner owner, string position)
         {
@@ -30,10 +33,6 @@ namespace WPF_Chess.Classes.Pieces
             DrawingImage baseImage = SetPieceImage(type);
             Image = UpdateDrawingColor(owner, baseImage);
         }
-
-        public bool HasAlreadyMoved { get; set; } = false;
-        public abstract Vector2D[] MovementVectors { get; set; }
-        public abstract Vector2D[] AttackVectors { get; set; }
 
         private static DrawingImage SetPieceImage(PieceType type)
         {
