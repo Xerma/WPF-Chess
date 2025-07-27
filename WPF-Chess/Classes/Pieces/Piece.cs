@@ -33,31 +33,28 @@ namespace WPF_Chess.Classes.Pieces
         }
 
         public bool HasAlreadyMoved { get; set; } = false;
-        public abstract Vector2D[] MovementVectors { get; }
-        public abstract Vector2D[] AttackVectors { get; }
+        public abstract Vector2D[] MovementVectors { get; set; }
+        public abstract Vector2D[] AttackVectors { get; set; }
 
-        private void SetPieceImage(PieceType type)
+        private static DrawingImage SetPieceImage(PieceType type)
         {
             switch (type)
             {
                 case PieceType.Pawn:
-                    _image = (DrawingImage)Application.Current.FindResource("PawnIcon");
-                    break;
+                    return (DrawingImage)Application.Current.TryFindResource("PawnIcon");
                 case PieceType.Knight:
-                    _image = (DrawingImage)Application.Current.FindResource("KnightIcon");
-                    break;
+                    return (DrawingImage)Application.Current.TryFindResource("KnightIcon");
                 case PieceType.Bishop:
-                    _image = (DrawingImage)Application.Current.FindResource("BishopIcon");
-                    break;
+                    return (DrawingImage)Application.Current.TryFindResource("BishopIcon");
                 case PieceType.Rook:
-                    _image = (DrawingImage)Application.Current.FindResource("RookIcon");
-                    break;
+                    return (DrawingImage)Application.Current.TryFindResource("RookIcon");
                 case PieceType.Queen:
-                    _image = (DrawingImage)Application.Current.FindResource("QueenIcon");
-                    break;
+                    return (DrawingImage)Application.Current.TryFindResource("QueenIcon");
                 case PieceType.King:
-                    _image = (DrawingImage)Application.Current.FindResource("KingIcon");
-                    break;
+                    return (DrawingImage)Application.Current.TryFindResource("KingIcon");
+                default:
+                    Debug.WriteLine("Warning: Icon not found.");
+                    throw new ArgumentOutOfRangeException(nameof(type), $"Unsupported piece type: {type}");
             }
         }
 
