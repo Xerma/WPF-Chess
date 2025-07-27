@@ -12,7 +12,7 @@ namespace WPF_Chess.Structs
         public readonly int Y = y;
 
         public string ToBoardString()
-    {
+        {
             if (!IsValidBoardVector())
                 return "";
             char column = (char)('A' + (X - 1));
