@@ -28,9 +28,9 @@ namespace WPF_Chess.Classes.Pieces
         {
             Type = type;
             Owner = owner;
-            CurrentPosition = currentPosition;
-            SetPieceImage(type);
-            _image = UpdateDrawingColor(owner, Image);
+            Position = position;
+            DrawingImage baseImage = SetPieceImage(type);
+            Image = UpdateDrawingColor(owner, baseImage);
         }
 
         public bool HasAlreadyMoved { get; set; } = false;
